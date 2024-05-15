@@ -1,0 +1,13 @@
+{
+    "service":{
+        "port":"localhost:8300"
+    },
+    "crv":{
+        "server":"http://127.0.0.1:8200",
+        "token":"audio_score_service"
+    },
+    "audio":{
+        "path":"D:/github/crvframe/service/appfile/test1/test2/audio_test/audio_test_file/",
+        "path1":"/appfile/audio_test/audio_test_file/"
+    }
+}
