@@ -95,6 +95,7 @@ func UpdateRecItem(recItem *TestRecItem,crvClient *crv.CRVClient,token string)(i
 
 func GetAudioFile(path,audioType,recID string)(*string){
 	fileMatch:=fmt.Sprintf("%s/%s_row%s_*",path,audioType,recID)
+	log.Println("GetAudioFile:",fileMatch)
 	files,_:=filepath.Glob(fileMatch)
 	if len(files)<=0 {
 		return nil
