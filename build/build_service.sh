@@ -16,9 +16,9 @@ if [ ! -e package/service ]; then
 fi
 
 if [ -e package/service/rt_test_service ]; then
-  rm -rf package/service/rt_test_service
+  rm -rf package/service/audioscoring
 fi
 
-mv ../service/rt_test_service ./package/service/rt_test_service
+mv ../service/audioscoring ./package/service/audioscoring
 
-echo rt_test_service build over.
+echo audioscoring build over.
