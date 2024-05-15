@@ -22,6 +22,7 @@ type crvConf struct {
 type Config struct {
 	Service serviceConf `json:"service"`
 	CRV crvConf `json:"crv"`
+	Audio audioConf `json:"audio"`
 }
 
 var gConfig Config
