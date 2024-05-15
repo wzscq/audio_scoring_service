@@ -13,5 +13,6 @@ func GetScore(ref,test string)(string) {
 		log.Println("GetScore exec audioscore.py error:",err)
 		return ""
 	}
+	log.Println(string(out))
   	return string(out)
 }
