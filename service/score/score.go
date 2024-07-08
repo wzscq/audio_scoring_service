@@ -27,6 +27,7 @@ func AdjuestScore(score string,scoreConf *common.ScoreConf)(string){
 		//string to float
 		fres, _ := strconv.ParseFloat(score, 64) 
 		for _,item:= range scoreConf.Adjustments {
+			log.Println("AdjuestScore item ",item,fres)
 			if item.MIN<fres && item.MAX>=fres {
 				log.Println("AdjuestScore by ",item)
 				fres=fres*item.Factor	

@@ -14,7 +14,7 @@
     "score":{
         "adjustments":[
             {
-                "min":0,
+                "min":0.0,
                 "max":4.0,
                 "factor":1.2
             }
