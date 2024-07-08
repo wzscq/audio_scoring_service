@@ -11,6 +11,7 @@ import (
 type ScoreController struct {
 	CRVClient *crv.CRVClient
 	AudioPath string
+	ScoreConf *common.ScoreConf
 }
 
 func (sc *ScoreController) Bind(router *gin.Engine) {
@@ -74,10 +75,12 @@ func (sc *ScoreController) scoring(c *gin.Context) {
 	
 	if callerAudio != nil {
 		recItem.CallerScore=GetScore(*originalAudio,*callerAudio)
+		recItem.CallerScore=AdjuestScore(recItem.CallerScore,sc.ScoreConf)
 	}
 
 	if calledAudio != nil {
 		recItem.CalledScore=GetScore(*originalAudio,*calledAudio)
+		recItem.CalledScore=AdjuestScore(recItem.CalledScore,sc.ScoreConf)
 	}
 
 	errorCode=UpdateRecItem(recItem,sc.CRVClient,header.Token)

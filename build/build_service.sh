@@ -15,7 +15,7 @@ if [ ! -e package/service ]; then
   mkdir package/service
 fi
 
-if [ -e package/service/rt_test_service ]; then
+if [ -e package/service/audioscoring ]; then
   rm -rf package/service/audioscoring
 fi
 

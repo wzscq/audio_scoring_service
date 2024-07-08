@@ -20,6 +20,7 @@ os.system("ffmpeg -i "+degaudio+" -ac 1 -ar 16000 -f wav  "+degoutput)
 rate, ref = wavfile.read(refoutput)
 rate, deg = wavfile.read(degoutput)
 
+#print(pesq(rate, ref, deg, 'nb'))
 print(pesq(rate, ref, deg, 'wb'))
 
 #删除临时文件

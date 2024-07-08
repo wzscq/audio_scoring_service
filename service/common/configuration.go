@@ -19,10 +19,21 @@ type crvConf struct {
 	Token string `json:"token"`
 }
 
+type ScoreAdjustmentItem struct {
+	MIN float64 `json:"min"`
+	MAX float64 `json:"max"`
+	Factor float64 `json:"factor"`
+}
+
+type ScoreConf struct {
+	Adjustments []ScoreAdjustmentItem `json:"adjustments"`
+}
+
 type Config struct {
 	Service serviceConf `json:"service"`
 	CRV crvConf `json:"crv"`
 	Audio audioConf `json:"audio"`
+	Score *ScoreConf `json:"score"`
 }
 
 var gConfig Config

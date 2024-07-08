@@ -36,6 +36,7 @@ func main() {
 	scoreController:=score.ScoreController{
 		CRVClient:crvClient,
 		AudioPath:conf.Audio.Path,
+		ScoreConf:conf.Score,
 	}
 	
 	scoreController.Bind(router)
