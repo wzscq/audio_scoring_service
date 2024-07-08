@@ -22,6 +22,7 @@ func GetScore(ref,test string)(string) {
 }
 
 func AdjuestScore(score string,scoreConf *common.ScoreConf)(string){
+	log.Println("AdjuestScore start ",score)
 	//按照匹配对分值做一个调整
 	if scoreConf!=nil {
 		//string to float
