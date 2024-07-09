@@ -18,16 +18,13 @@ func GetScore(ref,test string)(string) {
 	}
 
 	result:=string(out)
+	result=strings.Trim(result,"\n")
 	log.Println("GetScore py result",result)
   	return result
 }
 
 func AdjuestScore(score string,scoreConf *common.ScoreConf)(string){
 	log.Println("AdjuestScore start ",score)
-	data := []byte(score)
-	log.Println("AdjuestScore data ",data)
-	score=strings.Trim(score," ")
-	score=strings.Trim(score,"\t")
 	//按照匹配对分值做一个调整
 	if scoreConf!=nil {
 		//string to float
