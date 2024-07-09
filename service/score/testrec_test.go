@@ -64,22 +64,20 @@ func _TestGetAudioFile(t *testing.T) {
 }
 
 func TestAdjustScore(t *testing.T){
+
+
 	scoreConf:=&common.ScoreConf{
 		Adjustments:[]common.ScoreAdjustmentItem{
 			{
-				MIN:2.5,
-				MAX:3.5,
-				Factor:1.3,
-			},
-			{
-				MIN:3.5,
+				MIN:0,
 				MAX:4.0,
-				Factor:1.5,
+				Factor:1.3,
 			},
 		},
 	}
 
-	score:="3.51"
-	score=AdjuestScore(score,scoreConf)	
-	fmt.Println(score)	
+	recItem:=&TestRecItem{}
+	recItem.CallerScore=" 1.3948158025741577"
+	recItem.CallerScore=AdjuestScore(recItem.CallerScore,scoreConf)	
+	fmt.Println(recItem.CallerScore)
 }
