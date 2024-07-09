@@ -77,7 +77,7 @@ func TestAdjustScore(t *testing.T){
 	}
 
 	recItem:=&TestRecItem{}
-	recItem.CallerScore=" 1.3948158025741577"
+	recItem.CallerScore="	1.3948158025741577"
 	recItem.CallerScore=AdjuestScore(recItem.CallerScore,scoreConf)	
 	fmt.Println(recItem.CallerScore)
 }
